@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Galaxy Z Flip 4 | The Future Unfolds</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes unfold {
+            0% { transform: rotateX(90deg); opacity: 0; }
+            100% { transform: rotateX(0); opacity: 1; }
+        }
+        .unfold-animation {
+            animation: unfold 1.5s ease-out forwards;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a1128 0%, #001f54 50%, #034078 100%);
+        }
+        .phone-shadow {
+            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.3), 0 18px 36px -18px rgba(0, 0, 0, 0.33);
+        }
+        .flip-phone {
+            transform-style: preserve-3d;
+            perspective: 1500px;
+        }
+        .flip-phone-inner {
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        .flip-phone:hover .flip-phone-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-phone-front, .flip-phone-back {
+            backface-visibility: hidden;
+        }
+        .flip-phone-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0">
+                        <img class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung">
+                    </a>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#" class="text-blue-600 border-blue-500 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Galaxy Z Flip 4</a>
+                        <a href="#" class="text-gray-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-300 text-sm font-medium">Features</a>
+                        <a href="#" class="text-gray-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-300 text-sm font-medium">Specs</a>
+                        <a href="#" class="text-gray-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-300 text-sm font-medium">Gallery</a>
+                        <a href="#" class="text-gray-400 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-blue-300 text-sm font-medium">Support</a>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">Pre-order now</button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg rounded-b-lg">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="bg-blue-50 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Galaxy Z Flip 7</a>
+                <a href="#" class="border-transparent text-gray-300 hover:bg-blue-900/50 hover:border-blue-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Features</a>
+                <a href="#" class="border-transparent text-gray-300 hover:bg-blue-900/50 hover:border-blue-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Specs</a>
+                <a href="#" class="border-transparent text-gray-300 hover:bg-blue-900/50 hover:border-blue-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Gallery</a>
+                <a href="#" class="border-transparent text-gray-300 hover:bg-blue-900/50 hover:border-blue-300 hover:text-white block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Support</a>
+                <div class="mt-4 pl-3 pr-4 py-2">
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300">Pre-order now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 unfold-animation">Galaxy Z Flip 7</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">The future unfolds with our most innovative flip phone yet. Sleek, powerful, and designed to impress.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition duration-300 flex items-center justify-center">
+                            <span>Pre-order now</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <button class="bg-transparent border-2 border-white hover:bg-white/10 px-6 py-3 rounded-full font-medium transition duration-300 flex items-center justify-center">
+                            <span>Watch the film</span>
+                            <i class="fas fa-play ml-2"></i>
+                        </button>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-4 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-bolt text-yellow-400 mr-2"></i>
+                            <span>Fastest processor yet</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-camera text-purple-300 mr-2"></i>
+                            <span>Pro-grade camera</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="flip-phone w-full max-w-md">
+                        <div class="flip-phone-inner">
+                            <div class="flip-phone-front">
+                                <img src="https://www.gadgetguy.com.au/wp-content/uploads/2025/07/Samsung-Galaxy-Z-Flip-7-coral-red-1536x1024.jpg" alt="Galaxy Z Flip 7" class="phone-shadow w-full h-auto">
+                            </div>
+                            <div class="flip-phone-back absolute top-0">
+                                <img src="https://img.us.news.samsung.com/us/wp-content/uploads/2020/07/21235430/Galaxy_Z_Flip_5G_Mystic_Bronze-e1595437493174.jpg" alt="Galaxy Z Flip 7 folded" class="phone-shadow w-full h-hands-free">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Designed for the way you live</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">The Galaxy Z Flip 7 adapts to your life with innovative features that make every day extraordinary.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Flex Mode</h3>
+                    <p class="text-gray-600">Use your phone hands-free at different angles. Perfect for video calls, photos, and more.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-camera text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Pro Camera System</h3>
+                    <p class="text-gray-600">Capture stunning photos day and night with our advanced camera technology.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-battery-three-quarters text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">All-Day Battery</h3>
+                    <p class="text-gray-600">Power that keeps up with you, featuring fast charging and wireless power sharing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cover Screen Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0 order-2 lg:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-purple-300    mb-6">Stay in the know without opening your phone</h2>
+                    <p class="text-lg text-white mb-8">The larger Cover Screen gives you more information at a glance. Check notifications, respond to messages, control music, and more — all without unfolding your phone.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span class="text-white">Quick replies to messages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span class=" text-white">Music playback controls</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span class="text-white">Calendar and weather updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            <span class="text-white">Customizable widgets</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <img src="https://beam.pk/wp-content/uploads/2023/05/Samsung-Galaxy-Z-Flip5.webp">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Camera Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <img src="https://helios-i.mashable.com/imagery/reviews/02pSb6LOc7lcB1IZZqjA1Ca/images-12.fill.size_800x450.v1722641573.jpg" alt="Galaxy Z Flip 7 Camera" class="w-full max-w-md rounded-xl shadow-xl">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Capture life from every angle</h2>
+                    <p class="text-lg text-gray-600 mb-8">With Flex Mode, the Galaxy Z Flip 7 stands on its own so you can take hands-free photos and videos at unique angles. No tripod needed.</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Nightography</h3>
+                            <p class="text-gray-600 text-sm">Brighter night shots with enhanced Night Mode</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Director's View</h3>
+                            <p class="text-gray-600 text-sm">See all cameras at once while recording</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Auto Framing</h3>
+                            <p class="text-gray-600 text-sm">Keeps you in the frame automatically</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Portrait Video</h3>
+                            <p class="text-gray-600 text-sm">Beautiful bokeh effects in videos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colors Section -->
+    <section class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Colors that match your style</h2>
+                <p class="text-lg text-white max-w-3xl mx-auto">Choose from our premium color options to match your personal style.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-green-100 rounded-full p-8 mb-4 flex justify-center">
+                        <img src="https://media.extra.com/s/aurora/100316207_800/Samsung-Galaxy-Z-Flip-4%2C-5G%2C-256GB%2C-Graphite?locale=en-GB,en-*,*" alt="Graphite" class="w-40 h-auto">
+                    </div>
+                    <h3 class="font-semibold text-white">Graphite</h3>
+                    <p class="text-white">Sleek and professional</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-pink-50 rounded-full p-8 mb-4 flex justify-center">
+                        <img src="https://media.extra.com/s/aurora/100316206_800/Samsung-Galaxy-Z-Flip-4%2C-5G%2C-256GB%2C-Bora-Purple?locale=en-GB,en-*,*" alt="Bora Purple" class="w-40 h-auto">
+                    </div>
+                    <h3 class="font-semibold text-white">Bora Purple</h3>
+                    <p class="text-white">Vibrant and bold</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-50 rounded-full p-8 mb-4 flex justify-center">
+                        <img src="https://media.extra.com/s/aurora/100316205_800/Samsung-Galaxy-Z-Flip-4,-5G,-256GB,-Blue?locale=en-GB,en-*,*" alt="Blue" class="w-40 h-auto">
+                    </div>
+                    <h3 class="font-semibold text-white">Blue</h3>
+                    <p class="text-white">Cool and refreshing</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-yellow-50 rounded-full p-2 mb-4 flex justify-center">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.QF_9ea2CVOu1XWEMpYDd_AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pink Gold" class="w-40 h-auto">
+                    </div>
+                    <h3 class="font-semibold text-white">Pink Gold</h3>
+                    <p class="text-white">Elegant and luxurious</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Specifications</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Powerful performance meets innovative design</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Display</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">6.7" FHD+ Dynamic AMOLED 2X, 120Hz</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Cover Display</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1.9" Super AMOLED</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Processor</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Qualcomm Snapdragon 8 Gen 2</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Memory</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">8GB RAM + 256GB/512GB storage</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Camera</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dual 12MP rear cameras, 10MP front camera</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Battery</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3700mAh with fast charging</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">OS</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Android 13 with One UI 5</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dimensions</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Folded: 84.9 x 71.9 x 17.1mm<br>Unfolded: 165.2 x 71.9 x 6.9mm</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Weight</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">187g</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to unfold the future?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Be among the first to experience the revolutionary Galaxy Z Flip 7.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-medium text-lg transition duration-300">Pre-order now</button>
+                <button class="bg-transparent border-2 border-white hover:bg-white/10 px-8 py-4 rounded-full font-medium text-lg transition duration-300">Find a store</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Products</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Smartphones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tablets</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Wearables</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Audio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Offers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Store Locator</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Samsung Care+</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trade-in</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Live Chat</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Email</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Phone</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="text-gray-400 text-sm">Sign up for Samsung updates</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung" class="h-6">
+                </div>
+                <div class="text-gray-400 text-sm text-center md:text-right">
+                    <p>© 2023 Samsung. All rights reserved.</p>
+                    <div class="mt-2 flex flex-wrap justify-center md:justify-end space-x-4">
+                        <a href="#" class="hover:text-white">Privacy</a>
+                        <a href="#" class="hover:text-white">Terms</a>
+                        <a href="#" class="hover:text-white">Accessibility</a>
+                        <a href="#" class="hover:text-white">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+             });
+            });
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.unfold-animation').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
